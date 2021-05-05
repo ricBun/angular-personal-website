@@ -25,4 +25,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# base website was built from Siddartha Gupta's work
+# base website was built from Siddhartha Gupta's work
+can be found here: [Siddhartha's Github](https://github.com/siddhartha-gupta/angular-mini-sidenav)
