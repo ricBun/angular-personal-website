@@ -5,12 +5,12 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SidebarService {
-  private sidebarState = 'open';
+  public sidebarState = 'close';
   private sidebarStateChanged$ = new BehaviorSubject<string>(this.sidebarState);
   public sidebarStateObservable$ = this.sidebarStateChanged$.asObservable();
 
   constructor() {
-    this.sidebarStateChanged$.next('open');
+    this.sidebarStateChanged$.next('close');
   }
 
   toggle() {

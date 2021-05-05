@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,10 +8,18 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { ToggleSidebarModule } from './modules/toggle-sidebar/toggle-sidebar.module';
 import { HeaderModule } from './modules/header/header.module';
 import { SidebarModule } from './modules/sidebar/sidebar.module';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutMeComponent,
+    ContactComponent,
+    ProjectsComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +32,7 @@ import { SidebarModule } from './modules/sidebar/sidebar.module';
     ToggleSidebarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

@@ -7,7 +7,7 @@ import { SidebarService } from 'src/app/services/sidebar.service';
   styleUrls: ['./toggle-sidebar.component.scss']
 })
 export class ToggleSidebarComponent implements OnInit {
-
+  sideBarState = 'close';
   constructor(
     private sidebarService: SidebarService,
   ) { }
@@ -16,5 +16,6 @@ export class ToggleSidebarComponent implements OnInit {
 
   toggleSideNav() {
     this.sidebarService.toggle();
+    this.sideBarState = this.sidebarService.sidebarState;
   }
 }

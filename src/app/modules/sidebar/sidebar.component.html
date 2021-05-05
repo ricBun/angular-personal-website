@@ -1,21 +1,21 @@
 <div class="sidebar_menu" [@onSideNavChange]="sidebarState">
   <mat-nav-list class="menu-list">
-    <a mat-list-item routerLinkActive="active-list-item" routerLink="login" title="Login">
-      <mat-icon class="icon" [@iconAnimation]="sidebarState">input</mat-icon>
-      <span class="label" [@labelAnimation]="sidebarState">Login</span>
+    <a mat-list-item routerLinkActive="active-list-item" routerLink="about" title="About">
+      <mat-icon class="icon" [@iconAnimation]="sidebarState">portrait</mat-icon>
+      <span class="label" [@labelAnimation]="sidebarState">About Me</span>
     </a>
     <mat-divider></mat-divider>
     <a mat-list-item routerLinkActive="active-list-item" routerLink="dashboard" title="Dashboard">
-      <mat-icon class="icon" [@iconAnimation]="sidebarState">dashboard</mat-icon>
-      <span class="label" [@labelAnimation]="sidebarState">Dashboard</span>
+      <mat-icon class="icon material-icons-outlined" [@iconAnimation]="sidebarState">fact_check</mat-icon>
+      <span class="label" [@labelAnimation]="sidebarState">Work Experience</span>
     </a>
     <a mat-list-item routerLinkActive="active-list-item" routerLink="work" title="Work">
-      <mat-icon class="icon" [@iconAnimation]="sidebarState">work</mat-icon>
-      <span class="label" [@labelAnimation]="sidebarState">Work</span>
+      <mat-icon class="icon material-icons-outlined" [@iconAnimation]="sidebarState">lightbulb</mat-icon>
+      <span class="label" [@labelAnimation]="sidebarState">Projects</span>
     </a>
     <a mat-list-item routerLinkActive="active-list-item" routerLink="feedback" title="Feedback">
-      <mat-icon class="icon" [@iconAnimation]="sidebarState">feedback</mat-icon>
-      <span class="label" [@labelAnimation]="sidebarState">Feedback</span>
+      <mat-icon class="icon material-icons-outlined" [@iconAnimation]="sidebarState">contact_support</mat-icon>
+      <span class="label" [@labelAnimation]="sidebarState">Contact</span>
     </a>
   </mat-nav-list>
 </div>
