@@ -12,6 +12,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,14 @@ import { ExperienceComponent } from './components/experience/experience.componen
     AboutMeComponent,
     ContactComponent,
     ProjectsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    DashboardModule,
     HeaderModule,
     SidebarModule,
     ToggleSidebarModule,
