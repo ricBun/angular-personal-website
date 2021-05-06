@@ -1,5 +1,12 @@
 <div class="sidebar_menu" [@onSideNavChange]="sidebarState">
   <mat-nav-list class="menu-list">
+    <a mat-list-item>
+      <app-toggle-sidebar class="icon"></app-toggle-sidebar>
+    </a>
+    <a mat-list-item routerLinkActive="active-list-item" routerLink="home" title="Home">
+      <mat-icon class="icon material-icons-outlined" [@iconAnimation]="sidebarState">home</mat-icon>
+      <span class="label" [@labelAnimation]="sidebarState">Home</span>
+    </a>
     <a mat-list-item routerLinkActive="active-list-item" routerLink="about" title="About">
       <mat-icon class="icon" [@iconAnimation]="sidebarState">portrait</mat-icon>
       <span class="label" [@labelAnimation]="sidebarState">About Me</span>

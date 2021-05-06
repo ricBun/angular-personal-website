@@ -1,0 +1,73 @@
+<div class="main_container" style=" height:100vh;">
+  <mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile
+      [colspan]=1
+      [rowspan]=3
+      >
+    </mat-grid-tile>
+
+    <mat-grid-tile
+      [colspan]=1
+      [rowspan]=3
+      >
+        <!-- <img src="/assets/img/profile_pic_website.jpg" style="object-fit: cover; height: inherit; width: inherit;"> -->
+        <mat-card style="text-align: center;">
+          <mat-card-header>
+            <!-- <div mat-card-avatar class="example-header-image"></div> -->
+            <mat-card-title>Hello and Welcome!</mat-card-title>
+            <mat-card-subtitle>Glad you could make it :)</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="/assets/img/profile_pic_website.jpg "  alt="Profile Pic">
+          <mat-card-content>
+            <p>
+              My name is Richard Bun, and I am a Software Engineer. This website was built as my personal portfolio and used as an awesome way to apply what I've learned.
+              I have a never ending passion for learning and personal growth. Browse around to learn more about me!
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button click="navigateToExperience()">Experience</button>
+            <button mat-button>Projects</button>
+          </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+      [colspan]=1
+      [rowspan]=3
+      >
+    </mat-grid-tile>
+  </mat-grid-list>
+
+    <!-- <mat-grid-list cols="3" rowHeight="200px">
+      <mat-grid-tile
+          *ngFor="let tile of tiles"
+          [colspan]="tile.cols"
+          [rowspan]="tile.rows"
+          [style.background]="tile.color">
+        {{tile.text}}
+      </mat-grid-tile>
+    </mat-grid-list> -->
+
+    <!-- <mat-grid-list cols="3" rowHeight="150px">
+      <mat-grid-tile
+        [colspan]=1
+        [rowspan]=3
+        >
+      </mat-grid-tile>
+
+      <mat-grid-tile
+        [colspan]=1
+        [rowspan]=3
+        >
+          <img src="/assets/img/profile_pic_website.jpg" style="object-fit: cover; height: inherit; width: inherit;">
+      </mat-grid-tile>
+
+      <mat-grid-tile
+        [colspan]=1
+        [rowspan]=3
+        >
+      </mat-grid-tile>
+    </mat-grid-list> -->
+
+
+</div>
