@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarService } from 'src/app/services/sidebar.service';
-import { sidebarAnimation, iconAnimation, labelAnimation } from 'src/app/animations';
+import { sidebarAnimation, iconAnimation, labelAnimation } from 'src/app/animations/sidebar-animations';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

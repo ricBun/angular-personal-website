@@ -1,0 +1,7 @@
+@import '../../../theme.scss';
+$primary: map-get($my-custom-theme, primary);
+$accent: map-get($my-custom-theme, accent);
+
+.main_container {
+  background-image: linear-gradient(mat-color($primary),mat-color($accent));
+}

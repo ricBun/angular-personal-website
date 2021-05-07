@@ -89,6 +89,3 @@ export function labelAnimation(
     transition('open => close', animate(`${animationDuration} ease-in-out`)),
   ]);
 }
-
-
-//  --------- router page transitions ---------- //
