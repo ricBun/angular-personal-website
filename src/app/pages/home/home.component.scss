@@ -1,7 +1,14 @@
-@import '../../../theme.scss';
-$primary: map-get($my-custom-theme, primary);
-$accent: map-get($my-custom-theme, accent);
 
 .main_container {
-  background-image: linear-gradient(mat-color($primary),mat-color($accent));
+  background-image: url('https://images.pexels.com/photos/917494/pexels-photo-917494.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+  background-size: cover;
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }

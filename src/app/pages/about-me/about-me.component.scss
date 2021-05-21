@@ -1,17 +1,55 @@
-@import '../../../theme.scss';
-$primary: map-get($my-custom-theme, primary);
-$accent: map-get($my-custom-theme, accent);
+.profile-pic{
+  text-align: center;
+  object-fit: cover; /*this makes the image in src fit to the size specified below*/
+  width: 100%;
+  height: auto;
+}
+
+.profile-pic:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.description {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
 .main_container {
-  background-image: linear-gradient(mat-color($primary),mat-color($accent));
+    background-image: url('https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80');
+    background-repeat: no-repeat;
+    overflow: auto;
+    background-position: center;
+    background-size: cover;
 }
 
-// mat-grid-tile {
-//   background: lightblue;
-// }
+.center {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 
-mat-card img{
-  object-fit: cover; /*this makes the image in src fit to the size specified below*/
-  width: 50%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
-  height: 80%;
+mat-selection-list {
+  overflow: auto;
 }
+

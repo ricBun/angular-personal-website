@@ -1,8 +1,9 @@
 <div class="sidebar_menu" [@onSideNavChange]="sidebarState">
   <mat-nav-list class="menu-list">
-    <a mat-list-item>
+    <div expand-button mat-list-item>
       <app-toggle-sidebar class="icon"></app-toggle-sidebar>
-    </a>
+    </div>
+    <mat-divider></mat-divider>
     <a mat-list-item routerLinkActive="active-list-item" routerLink="home" title="Home">
       <mat-icon class="icon material-icons-outlined" [@iconAnimation]="sidebarState">home</mat-icon>
       <span class="label" [@labelAnimation]="sidebarState">Home</span>
@@ -11,12 +12,11 @@
       <mat-icon class="icon" [@iconAnimation]="sidebarState">portrait</mat-icon>
       <span class="label" [@labelAnimation]="sidebarState">About Me</span>
     </a>
-    <mat-divider></mat-divider>
     <a mat-list-item routerLinkActive="active-list-item" routerLink="experience" title="Experience">
       <mat-icon class="icon material-icons-outlined" [@iconAnimation]="sidebarState">fact_check</mat-icon>
-      <span class="label" [@labelAnimation]="sidebarState">Work Experience</span>
+      <span class="label" [@labelAnimation]="sidebarState">Experience</span>
     </a>
-    <a mat-list-item routerLinkActive="active-list-item" routerLink="projects" title="Project">
+    <a mat-list-item routerLinkActive="active-list-item" routerLink="projects" title="Projects">
       <mat-icon class="icon material-icons-outlined" [@iconAnimation]="sidebarState">lightbulb</mat-icon>
       <span class="label" [@labelAnimation]="sidebarState">Projects</span>
     </a>

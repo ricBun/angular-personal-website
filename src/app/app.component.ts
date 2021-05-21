@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarService } from 'src/app/services/sidebar.service';
-import { mainContentAnimation } from './animations/sidebar-animations';
+import { mainContentAnimation } from './animations';
 
 @Component({
   selector: 'app-root',

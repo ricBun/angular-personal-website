@@ -89,3 +89,20 @@ export function labelAnimation(
     transition('open => close', animate(`${animationDuration} ease-in-out`)),
   ]);
 }
+
+// ------------ animations for page transition ------------ //
+export const fadeAnimation = trigger('fadeAnimation', [
+  transition(
+    ':enter', [
+      style({opacity: 0}),
+      animate('1s linear',
+        style({opacity: 1}))
+    ]
+  ),
+  transition(
+    ':leave', [
+      style({opacity: 1}),
+      animate('1s linear',
+        style({opacity: 0}))
+    ]
+  )]);
