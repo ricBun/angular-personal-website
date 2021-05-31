@@ -6,6 +6,8 @@ export const environment = {
   production: false
 };
 
+export const emailURL = "https://script.google.com/macros/s/AKfycbxM1jnirAQsWz9BoLwo_-JZoYjRjbe0ww06jZ7AmQLzJBsWSy-Q/exec";
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

@@ -13,6 +13,9 @@ import { ExperienceComponent } from './pages/experience/experience.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { MaterialModule } from './modules/material-module/material-module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,15 @@ import { MaterialModule } from './modules/material-module/material-module';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     HeaderModule,
     SidebarModule,
     ToggleSidebarModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

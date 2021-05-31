@@ -1,6 +1,71 @@
 <div class="main_container" style=" height:100vh;" [@fadeAnimation]>
-  <div style="text-align:center">
-    <h1>
-      Contact
-    </h1>
+  <div style="margin-top: 40px;">
+    <section class="text_section">
+      <div class="row justify-content-center align-items-center">
+        <h3 class="text_section_title">Give me a shout!</h3>
+      </div>
+    </section>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-5">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+            <mat-error *ngIf="name.invalid">{{getError(name)}}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-5">
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="sample@email.com" formControlName="email">
+            <mat-error *ngIf="email.invalid">{{getError(email)}}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-5">
+          <mat-form-field>
+            <mat-label>Message</mat-label>
+            <textarea matInput placeholder="your message..." formControlName="message" CdkTextareaAutosize></textarea>
+            <mat-error *ngIf="message.invalid">{{getError(message)}}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-5">
+          <button mat-raised-button color="primary" [disabled]="isLoading" class="submit" type="submit">Submit</button>
+          <input [formControl]="honeypot" class="hidden" type="text" />
+          <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+            <span>{{responseMessage}}</span>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-5">
+        <br/>
+        <hr/>
+
+        <div class="row justify-content-center align-items-center social-icons">
+          <a href="https://www.linkedin.com/in/richardbun/" target="_blank">
+            <fa-icon [icon]="faLinkedIn"></fa-icon>
+          </a>
+          <a href="https://github.com/ricBun" target="_blank">
+            <fa-icon [icon]="faGitHub"></fa-icon>
+          </a>
+          <a href="https://www.facebook.com/richard.bun.58" target="_blank">
+            <fa-icon [icon]="faFacebook"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

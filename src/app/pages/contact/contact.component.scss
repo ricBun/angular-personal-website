@@ -1,0 +1,43 @@
+@import '../../../theme.scss';
+$primary: map-get($my-custom-theme, primary);
+$accent: map-get($my-custom-theme, accent);
+
+.hidden {
+	display: none
+}
+.visible {
+	display: block
+}
+.center-text {
+	text-align: center
+}
+
+button {
+	transition: 0.4s;
+	width: 100%;
+}
+button:hover:enabled{
+	color: black;
+	background-color: white;
+}
+mat-form-field {
+  width: 100%;
+}
+
+
+/* Icons */
+.social-icons a {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  color: black !important;
+  text-align: center;
+  font-size: 2.5rem;
+  // line-height: 2rem;
+  margin-right: 1rem;
+}
+
+
+.social-icons a:hover {
+  color: mat-color($primary);
+}
