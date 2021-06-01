@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-mini-sidenav": {
+    "angular-personal-website": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-mini-sidenav",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,8 +57,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "95kb",
+                  "maximumError": "100kb"
                 }
               ]
             }
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-mini-sidenav:build"
+            "browserTarget": "angular-personal-website:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-mini-sidenav:build:production"
+              "browserTarget": "angular-personal-website:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-mini-sidenav:build"
+            "browserTarget": "angular-personal-website:build"
           }
         },
         "test": {
@@ -117,16 +117,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-mini-sidenav:serve"
+            "devServerTarget": "angular-personal-website:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-mini-sidenav:serve:production"
+              "devServerTarget": "angular-personal-website:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "angular-mini-sidenav"
+  "defaultProject": "angular-personal-website"
 }

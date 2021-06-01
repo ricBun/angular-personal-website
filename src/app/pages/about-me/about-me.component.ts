@@ -26,17 +26,5 @@ export class AboutMeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  tiles: Tile[] = [
-    {text: 'One', cols: 1, rows: 3, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 3, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 3, color: 'lightpink'},
-  ];
-
 }
 
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
