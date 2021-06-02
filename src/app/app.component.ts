@@ -23,4 +23,9 @@ export class AppComponent implements OnInit {
         this.sidebarState = newState;
       });
   }
+
+  onActivate(event) {
+    document.body.scrollTop = 0;
+  }
+
 }
