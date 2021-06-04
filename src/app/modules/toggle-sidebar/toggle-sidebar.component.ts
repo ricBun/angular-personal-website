@@ -7,12 +7,16 @@ import { SidebarService } from 'src/app/services/sidebar.service';
   styleUrls: ['./toggle-sidebar.component.scss']
 })
 export class ToggleSidebarComponent implements OnInit {
-  sideBarState = 'close';
+  sideBarState = 'open';
   constructor(
     private sidebarService: SidebarService,
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    setTimeout(() => {
+      this.sidebarService.toggle();
+    }, 700);
+   }
 
   toggleSideNav() {
     this.sidebarService.toggle();
