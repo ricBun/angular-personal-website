@@ -18,7 +18,6 @@ export class AboutMeComponent implements OnInit {
   getPageTransition(){
     if (this.router.isActivated){
       const {path} = this.router.activatedRoute.routeConfig;
-      console.log(path);
       return path;
     }
   }
