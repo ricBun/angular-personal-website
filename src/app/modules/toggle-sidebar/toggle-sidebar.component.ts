@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarService } from 'src/app/services/sidebar.service';
+import {
+  getSupportedInputTypes,
+  Platform,
+  supportsPassiveEventListeners,
+  supportsScrollBehavior,
+} from '@angular/cdk/platform';
 
 @Component({
   selector: 'app-toggle-sidebar',
@@ -7,15 +13,24 @@ import { SidebarService } from 'src/app/services/sidebar.service';
   styleUrls: ['./toggle-sidebar.component.scss']
 })
 export class ToggleSidebarComponent implements OnInit {
-  sideBarState = 'open';
+
+  supportedInputTypes = Array.from(getSupportedInputTypes()).join(', ');
+  supportsPassiveEventListeners = supportsPassiveEventListeners();
+  supportsScrollBehavior = supportsScrollBehavior();
+
+  sideBarState = 'close';
   constructor(
     private sidebarService: SidebarService,
+    public platform: Platform
   ) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.sidebarService.toggle();
-    }, 700);
+    if (!this.platform.ANDROID && !this.platform.IOS){
+      setTimeout(() => {
+        this.sideBarState = 'open';
+        this.sidebarService.toggle();
+      }, 700);
+    }
    }
 
   toggleSideNav() {
